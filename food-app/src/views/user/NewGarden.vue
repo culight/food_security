@@ -77,7 +77,7 @@ export default {
         value: '',
         text: '',
       },
-      typeNumber: 1
+      typeNumber: 1,
     };
   },
   methods: {
