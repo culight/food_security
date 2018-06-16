@@ -95,6 +95,12 @@ export default {
 
           this.searchResults = shuffle(arr.slice(0, num));
         });
+      // axios.get(`https://flask-foodapp.herokuapp.com/produce/${this.searchTerm}`)
+      //   .then((response) => {
+      //     // this.searchResults = response.data;
+
+      //     // this.searchResults = shuffle(arr.slice(0, num));
+      //   });
     },
   },
   // computed: {

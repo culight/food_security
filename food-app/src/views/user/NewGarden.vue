@@ -31,7 +31,7 @@
       <div :key="i" v-for="(n, i) in typeNumber">
         <label>Plant Type {{ n }}</label>
         <basic-select :options="options"
-                    :selected-option="item"
+                    :selected-option="items[i]"
                     style="border-radius: 0"
                     placeholder="select plant"
                     @select="onSelect">
@@ -73,23 +73,20 @@ export default {
         { value: 'brussels sprouts', text: 'brussels sprouts' },
       ],
       searchText: '', // If value is falsy, reset searchText & searchItem
-      item: {
-        value: '',
-        text: '',
-      },
+      items: [],
       typeNumber: 1,
     };
   },
   methods: {
     onSelect(item) {
-      this.item = item;
+      this.items.push(item);
     },
     reset() {
-      this.item = {};
+      this.items = [];
     },
     selectOption() {
       // select option from parent component
-      this.item = this.options[0];
+      this.items.push(this.options[0]);
     },
     remove(item) {
       this.items.splice(this.items.indexOf(item), 1);
