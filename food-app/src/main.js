@@ -8,6 +8,7 @@ import './foundation';
 import './navUtil';
 
 import VueGeolocation from 'vue-browser-geolocation';
+
 Vue.use(VueGeolocation);
 
 Vue.config.productionTip = false;

@@ -44,6 +44,8 @@
       <div v-else-if="currentUserType === 'gardener'">
         <Gardener v-if="currentGardenType === 'garden-metrics'" />
         <NewGarden v-else-if="currentGardenType === 'new-garden'" />
+        <PlantDetails v-else-if="currentGardenType === 'plant-details'" />
+        <Help v-else-if="currentGardenType === 'help'" />
       </div>
 
       <!-- Volunteer content -->
@@ -51,7 +53,7 @@
 
       <!-- Default content -->
       <div class="cell medium-8" v-else>
-      <h3>Choose a user type</h3>
+      <!-- <h3>Choose a user type</h3> -->
       </div>
 
     </div>
@@ -64,6 +66,8 @@ import Consumer from '@/views/user/Consumer.vue';
 import Gardener from '@/views/user/Gardener.vue';
 import NewGarden from '@/views/user/NewGarden.vue';
 import Volunteer from '@/views/user/Volunteer.vue';
+import PlantDetails from '@/views/user/PlantDetails.vue';
+import Help from '@/views/user/Help.vue';
 
 export default {
   components: {
@@ -71,6 +75,8 @@ export default {
     Gardener,
     NewGarden,
     Volunteer,
+    PlantDetails,
+    Help
   },
   data() {
     return {
