@@ -8,5 +8,12 @@ module.exports = {
         zf: 'foundation-sites/js',
       },
     },
+    plugins: [
+      new webpack.LoaderOptionsPlugin({
+        options: {
+          postcss: {},
+        },
+      }),
+    ],
   },
 };
