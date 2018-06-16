@@ -33,7 +33,7 @@ export default {
     LTileLayer,
     LMarker,
     LPopup,
-    MapSidebar
+    MapSidebar,
   },
   data() {
     return {
@@ -55,16 +55,16 @@ export default {
     doSearch() {
       console.log('searching...', this.searchTerm);
       axios.get(`http://localhost:5000/produce/${this.searchTerm}`)
-      .then(response => {
-        this.searchResults = response.data;
+        .then((response) => {
+          this.searchResults = response.data;
 
-        console.log(this.searchResults);
+          console.log(this.searchResults);
         // handle map marker placement here
-      })
-      .catch(error => {
-        console.log(error);
-      })
-    }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
   // computed: {
   //   center: function () {
@@ -74,9 +74,9 @@ export default {
   mounted() {
     const L = L;
   	this.$getLocation({
-      enableHighAccuracy: true
+      enableHighAccuracy: true,
     })
-      .then(coordinates => {
+      .then((coordinates) => {
         console.log(coordinates);
         this.lat = coordinates.lat;
         this.lng = coordinates.lng;
