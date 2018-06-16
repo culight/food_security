@@ -1,0 +1,172 @@
+$mobile-app-toggle-radius: rem-calc(10);
+$mobile-app-toggle-color: $primary-color;
+$mobile-app-toggle-margin-bottom: $global-margin;
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 70px;
+
+  .hollow.button {
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #a52a2a;
+    border: 1px solid #a52a2a;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  i.fab {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+
+  .four-up-feature {
+    text-align: center;
+    margin-bottom: 40px;
+  
+    .four-up-feature-header {
+      margin-bottom: 3rem;
+      display: flex;
+    }
+  
+    .four-up-feature-image {
+      margin-bottom: 2rem;
+    }
+  
+    .four-up-feature-text {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  $full-width-testimonial-quote-color: $warning-color;
+  $full-width-testimonial-vertical-padding: 2rem;
+  
+  .full-width-testimonial {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.1)
+    ),
+      url("./assets/garden2.jpg");
+    background-position: center center;
+  }
+  
+  .full-width-testimonial-icon {
+    .quote-path {
+      fill:none;
+      stroke: $full-width-testimonial-quote-color;
+      stroke-width:2.5192;
+      stroke-miterlimit:10;
+    }
+  }
+  
+  .full-width-testimonial-content,
+  .full-width-testimonial-icon {
+    text-align: center;
+  }
+  .full-width-testimonial-section {
+    padding-top: $full-width-testimonial-vertical-padding;
+    
+    .full-width-testimonial-text {
+      font-weight: 300;
+      color: #ffffff;
+      padding-left: 30px;
+      padding-right: 30px;
+      // Adjust margin-top for line spacing
+      margin-top: -5px;
+      
+      @include breakpoint(small) {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 1.5em;
+      }
+      
+      @include breakpoint(medium) {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      
+      @include breakpoint(large) {
+        padding-left: 180px;
+        padding-right: 180px;
+        font-size: 1.8em;
+      }
+      
+      @include breakpoint(xlarge) {
+        padding-left: 300px;
+        padding-right: 300px;
+      }
+    }
+    
+    .full-width-testimonial-source {
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-bottom: 0;
+      margin-bottom: 0.2em;
+      
+      @include breakpoint(small) {
+        font-size: 1.0em;
+      }
+    }
+    
+    .full-width-testimonial-source-context {
+      display: block;
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    
+      @include breakpoint(small) {
+        font-size: 0.8em;
+      }
+    }
+    
+    .slick-slider {
+      margin-bottom: 0px;
+    }
+  }
+
+  .full-width-testimonial-text,
+  .full-width-testimonial-content,
+  .full-width-testimonial-source,
+  .full-width-testimonial-icon {
+    padding-bottom: $full-width-testimonial-vertical-padding;
+  }
+  
+  .full-width-testimonial-content {
+    width: 100%;
+  }
+
+}
+
+.mobile-app-toggle {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  border: 1px solid $mobile-app-toggle-color;
+  border-radius: $mobile-app-toggle-radius;
+  overflow: hidden;
+  margin-bottom: $mobile-app-toggle-margin-bottom;
+
+  .button {
+    background: transparent;
+    color: $mobile-app-toggle-color;
+    margin-bottom: 0;
+    flex: 1 0 0;
+
+    &:nth-child(n+1) {
+      border-left: 1px solid $mobile-app-toggle-color;
+    }
+
+    &.is-active {
+      background: $mobile-app-toggle-color;
+      color: $white;
+    }
+  }
+}

@@ -11,7 +11,7 @@ body {
   height: $sticky-shrinknav-menu-height;
   line-height: $sticky-shrinknav-menu-height;
   width: 100%;
-  background-color: rgba($primary-color, 0.1);
+  background-color: rgba(#547254, 0.4);
   transition: all 0.5s ease;
 
   li {
@@ -36,6 +36,7 @@ body {
   margin-bottom: 0;
   color: $white;
   font-size: 5rem;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .sticky-shrinknav-header {
@@ -49,7 +50,7 @@ body {
   background: url('./assets/garden9.jpg') no-repeat;
   background-size: cover;
   .layer {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: saturate(rgba(150, 150, 150, 0.2), 15%);
     position: absolute;
     top: 0;
     left: 0;
