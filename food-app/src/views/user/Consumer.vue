@@ -32,7 +32,7 @@ export default {
     LTileLayer,
     LMarker,
     LPopup,
-    MapSidebar
+    MapSidebar,
   },
   data() {
     return {
@@ -42,7 +42,7 @@ export default {
       url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       marker: L.latLng(47.413220, -1.219482),
       markers: [],
-      L
+      L,
     };
   },
   methods: {
@@ -58,9 +58,9 @@ export default {
   mounted() {
     const L = L;
   	this.$getLocation({
-      enableHighAccuracy: true
+      enableHighAccuracy: true,
     })
-      .then(coordinates => {
+      .then((coordinates) => {
         console.log(coordinates);
         this.lat = coordinates.lat;
         this.lng = coordinates.lng;

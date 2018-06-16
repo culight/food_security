@@ -7,6 +7,8 @@ import UserContainer from './views/user/UserContainer.vue';
 import UserMain from './views/user/UserMain.vue';
 import Gardener from './views/user/Gardener.vue';
 import NewGarden from './views/user/NewGarden.vue';
+import PlantDetails from './views/user/PlantDetails.vue';
+import Help from './views/user/Help.vue';
 
 Vue.use(Router);
 
