@@ -31,21 +31,21 @@ export default new Router({
       children: [
         {
           path: '',
-          component: UserMain
+          component: UserMain,
         },
         {
           path: 'garden',
-          component: UserMain
+          component: UserMain,
         },
         {
           path: 'gov',
-          component: UserMain
+          component: UserMain,
         },
         {
           path: 'individual',
-          component: UserMain
-        }
-      ]
+          component: UserMain,
+        },
+      ],
     },
   ],
 });

@@ -30,7 +30,7 @@ export default {
   },
   mounted() {
     console.log(this.$router.currentRoute.fullPath);
-  }
+  },
 };
 </script>
 
