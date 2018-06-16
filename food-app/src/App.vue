@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header id="nav" class="sticky-shrinknav-header">
+    <header v-if="!/user/.test($router.currentRoute.fullPath)" id="nav" class="sticky-shrinknav-header">
       <div class="layer"></div>
       <h1 class="sticky-shrinknav-header-title">Social Garden</h1>
       <!-- <h3><i>Helping communities help themselves!</i></h3> -->
@@ -8,8 +8,10 @@
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/about">About</router-link></li>
         <li><router-link to="/gallery">Gallery</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
       </ul>
+    </header>
+    <header v-else id="nav">
+
     </header>
 
     <router-view />
@@ -26,6 +28,9 @@ export default {
   components: {
     AppFooter: Footer,
   },
+  mounted() {
+    console.log(this.$router.currentRoute.fullPath);
+  }
 };
 </script>
 
