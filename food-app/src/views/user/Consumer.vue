@@ -54,7 +54,7 @@ export default {
     },
     doSearch() {
       console.log('searching...', this.searchTerm);
-      axios.get(`http://localhost:5000/produce/${this.searchTerm}`)
+      axios.get(`https://flask-foodapp.herokuapp.com/produce/${this.searchTerm}`)
         .then((response) => {
           this.searchResults = response.data;
 
