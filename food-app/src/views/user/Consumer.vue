@@ -2,7 +2,7 @@
   <div class="consumer-container cell grid-x grid-padding-x">
 
     <div class="search-container large-8 cell">
-      <input type="search" name="search" placeholder="Search.." class="animated-search-form">
+      <input @keyup.enter="doSearch" v-model="searchTerm" type="search" name="search" placeholder="Search.." class="animated-search-form">
       <!-- <div class="button">Search</div> -->
     </div>
 
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import L from 'leaflet';
 import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet';
 import MapSidebar from './MapSidebar.vue';
@@ -45,11 +46,26 @@ export default {
       marker: L.latLng(47.413220, -1.219482),
       markers: [],
       L,
+      searchTerm: '',
+      searchResults: [],
     };
   },
   methods: {
     onPan(e) {
       console.log(e);
+    },
+    doSearch() {
+      console.log('searching...', this.searchTerm);
+      axios.get(`http://localhost:5000/produce/${this.searchTerm}`)
+        .then((response) => {
+          this.searchResults = response.data;
+
+          console.log(this.searchResults);
+        // handle map marker placement here
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
   // computed: {
