@@ -76,7 +76,7 @@ export default {
     NewGarden,
     Volunteer,
     PlantDetails,
-    Help
+    Help,
   },
   data() {
     return {

@@ -6,6 +6,8 @@
       <!-- <div class="button">Search</div> -->
     </div>
 
+    <div class="large-1 cell"></div>
+
     <div class="map-container large-8 cell">
       <l-map :zoom="zoom" ref="mymap" :center="L.latLng(lat, lng)" style="width: 100%; height: 500px" :options='{zoomControl: true}'>
         <l-tile-layer :url="url"></l-tile-layer>
@@ -15,7 +17,7 @@
       </l-map>
     </div>
 
-    <div class="sidebar-container">
+    <div class="sidebar-container large-2 cell">
       <map-sidebar />
     </div>
   </div>
