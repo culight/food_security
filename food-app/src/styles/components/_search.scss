@@ -4,8 +4,8 @@
   
   .animated-search-form[type=search] {
     width: $animated-search-form-initial-width;
-    border: 0.125rem solid $light-gray;
-    box-shadow: 0 0 3.125rem rgba(0,0,0, 0.18);
+    border: 1px solid $dark-gray;
+    box-shadow: 0 0 .725rem rgba(0,0,0, 0.18);
     border-radius: $global-radius;
     background-image: url('//image.ibb.co/i7NbrQ/search_icon_15.png');
     background-position: 0.625rem 0.625rem;
