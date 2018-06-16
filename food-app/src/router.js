@@ -5,6 +5,7 @@ import About from './views/About.vue';
 import Gallery from './views/Gallery.vue';
 import UserContainer from './views/user/UserContainer.vue';
 import UserMain from './views/user/UserMain.vue';
+import Gardener from './views/user/Gardener.vue';
 
 Vue.use(Router);
 
@@ -34,8 +35,8 @@ export default new Router({
           component: UserMain,
         },
         {
-          path: 'garden',
-          component: UserMain,
+          path: 'gardener',
+          component: Gardener,
         },
         {
           path: 'gov',

@@ -1,7 +1,7 @@
 $sticky-shrinknav-menu-height: rem-calc(60);
 $sticky-shrinknav-hero-height: 300px;
 
-body {
+.main-body {
   padding-top: $sticky-shrinknav-hero-height + 30px;
 }
 
@@ -70,7 +70,7 @@ body {
   }
 }
 
-body.sticky-shrinknav-wrapper {
+.main-body.sticky-shrinknav-wrapper {
   padding-top: 130px;
 
   .sticky-shrinknav-header{

@@ -14,6 +14,10 @@
 
     </header>
 
+    <div v-if="!/user/.test($router.currentRoute.fullPath)" class="main-body">
+      <router-view />
+    </div>
+
     <router-view />
 
     <app-footer />
