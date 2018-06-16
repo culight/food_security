@@ -75,7 +75,7 @@ export default {
   data() {
     return {
       currentUserType: '',
-      currentGardenType: ''
+      currentGardenType: '',
     };
   },
   methods: {
@@ -84,8 +84,8 @@ export default {
     },
     switchGardenType(gardenType) {
       this.currentGardenType = gardenType;
-    }
-  }
+    },
+  },
 };
 </script>
 
