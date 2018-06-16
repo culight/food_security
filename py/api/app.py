@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS, cross_origin
 import psycopg2
 import json
 
@@ -9,12 +10,14 @@ except:
   print("Cannot connect to database")
 
 app = Flask(__name__)
+CORS(app, support_credentials=True)
 
 @app.route('/')
 def index():
   return "hey there"
 
 @app.route('/produce/<string:name>', methods=['GET'])
+@cross_origin(supports_credentials=True)
 def get_produce(name):
   query = """
     select g.* from produce p
