@@ -17,8 +17,9 @@
     <div v-if="!/user/.test($router.currentRoute.fullPath)" class="main-body">
       <router-view />
     </div>
-
-    <router-view />
+    <div v-else>
+      <router-view />
+    </div>
 
     <app-footer />
   </div>
